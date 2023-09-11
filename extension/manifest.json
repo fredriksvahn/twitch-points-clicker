@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Twitch Points Autoclicker",
+  "version": "1.0.0",
+  "description": "Tired of clicking to get your points on your favorite twitch channel? This will automagically click each time you get new points.",
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "128": "images/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Twitch Points Autoclicker"
+  },
+  "permissions": ["scripting"],
+  "host_permissions": ["https://twitch.tv/*"],
+  "content_scripts": [{ "matches": ["<all_urls>"], "js": ["popup.js"] }]
+}
